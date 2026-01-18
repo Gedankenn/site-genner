@@ -1,0 +1,8 @@
+services:
+  site:
+    build: ./site
+    container_name: genner_site
+    restart: unless-stopped
+    ports:
+      - "3000:3000"
+
