@@ -87,60 +87,26 @@ cd site
 npm install
 npm run dev
 
+```
+
 Acesse:
 
-http://localhost:3000
+``http://localhost:3000``
 
 🐳 Rodando com Docker
 
-docker-compose up --build
+``docker-compose up --build``
+
 
 ⚙️ Comandos úteis
+
+```bash
 
 make dev      # ambiente de desenvolvimento
 make build    # build do site
 docker-compose down
 
-🧪 Conceitos aplicados
-
-    Componentização
-
-    Server vs Client Components
-
-    UX narrativa
-
-    Design de produto
-
-    Reutilização de layout
-
-    Arquitetura limpa
-
-    Integração de serviços externos
-
-    Preparação para produção
-
-/docs
-  home.png
-  sobre.png
-  avaliacao.png
-  videos.png
-  contato.png
-
-🚀 Próximas evoluções
-
-    Integração com Instagram Graph API
-
-    SEO técnico
-
-    Animações leves
-
-    Botão flutuante de contato
-
-    Performance pass
-
-    Deploy automatizado
-
-    Dark mode
+```
 
 👨‍💻 Autor
 
