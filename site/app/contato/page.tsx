@@ -1,3 +1,5 @@
+import ContactForm from "@/components/ContactForm"
+
 export const metadata = {
   title: "Contato | Genner",
   description: "Entre em contato para agendamentos, dúvidas ou informações.",
@@ -70,48 +72,7 @@ export default function Contato() {
           }}
         >
           {/* FORM */}
-          <form
-            style={{
-              background: "linear-gradient(160deg, #7FA99B, #AFCBC2)",
-              padding: 48,
-              borderRadius: 36,
-              boxShadow: "0 25px 60px rgba(0,0,0,0.18)",
-            }}
-          >
-            <h2 style={{ marginBottom: 26, color: "#1F3F38" }}>
-              Enviar mensagem
-            </h2>
-
-            <Field label="Nome" placeholder="Seu nome" />
-            <Field label="E-mail" placeholder="seuemail@email.com" />
-            <Field label="Telefone" placeholder="(xx) xxxxx-xxxx" />
-
-            <div style={{ marginBottom: 24 }}>
-              <label style={labelStyle}>Mensagem</label>
-              <textarea
-                placeholder="Escreva sua mensagem..."
-                rows={5}
-                style={inputStyle}
-              />
-            </div>
-
-            <button
-              type="submit"
-              style={{
-                marginTop: 10,
-                padding: "14px 32px",
-                borderRadius: 16,
-                border: "none",
-                background: "linear-gradient(135deg, #2F4F47, #1F3F38)",
-                color: "white",
-                fontSize: 15,
-                cursor: "pointer",
-                boxShadow: "0 10px 22px rgba(0,0,0,0.25)",
-              }}
-            >
-              Enviar mensagem
-            </button>
-          </form>
+          <ContactForm />
 
           {/* BLOCO LATERAL */}
           <div>
@@ -128,7 +89,7 @@ export default function Contato() {
 
             <p style={sideText}>
               Atendimentos presenciais e online. Caso prefira, você também pode
-              entrar em contato diretamente por WhatsApp ou e-mail.
+              entrar em contato diretamente por WhatsApp.
             </p>
 
             <div
@@ -151,36 +112,6 @@ export default function Contato() {
       </section>
     </main>
   )
-}
-
-/* COMPONENTE DE CAMPO */
-
-function Field({ label, placeholder }: { label: string; placeholder: string }) {
-  return (
-    <div style={{ marginBottom: 22 }}>
-      <label style={labelStyle}>{label}</label>
-      <input placeholder={placeholder} style={inputStyle} />
-    </div>
-  )
-}
-
-/* STYLES */
-
-const labelStyle: React.CSSProperties = {
-  display: "block",
-  marginBottom: 6,
-  fontSize: 13,
-  letterSpacing: 0.5,
-  color: "#1F3F38",
-}
-
-const inputStyle: React.CSSProperties = {
-  width: "100%",
-  padding: "12px 14px",
-  borderRadius: 12,
-  border: "1px solid rgba(0,0,0,0.15)",
-  fontSize: 14,
-  outline: "none",
 }
 
 const sideText: React.CSSProperties = {
