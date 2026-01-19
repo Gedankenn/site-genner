@@ -220,7 +220,7 @@ export default function Avaliacao() {
           </p>
 
           <a
-            href="#"
+            href="/contato"
             style={{
               display: "inline-block",
               padding: "14px 34px",

@@ -10,7 +10,7 @@ export default function Home() {
         description="Psicólogo há mais de 5 anos. Atuação em Terapia Cognitivo-Comportamental, Terapia do Esquema e Avaliação Neuropsicológica."
         image="/images/genner.jpeg"
         ctaText="Entrar em contato"
-        ctaLink="#"
+        ctaLink="/contato"
       />
 
       <Section
