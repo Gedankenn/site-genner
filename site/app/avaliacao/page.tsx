@@ -1,4 +1,5 @@
 import Image from "next/image"
+import CTA from "@/components/CTA"
 
 export const metadata = {
   title: "Avaliação Neuropsicológica | Genner",
