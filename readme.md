@@ -2,9 +2,8 @@
 ### Site institucional moderno • Produto digital • Frontend + Arquitetura
 
 ![Next.js](https://img.shields.io/badge/Next.js-16-black?logo=nextdotjs)
-![React](https://img.shields.io/badge/React-18-61DAFB?logo=react&logoColor=black)
+![React](https://img.shields.io/badge/React-19-61DAFB?logo=react&logoColor=black)
 ![TypeScript](https://img.shields.io/badge/TypeScript-5-3178C6?logo=typescript&logoColor=white)
-![Docker](https://img.shields.io/badge/Docker-ready-2496ED?logo=docker&logoColor=white)
 ![Status](https://img.shields.io/badge/Status-Em%20desenvolvimento-7FA99B)
 ![License](https://img.shields.io/badge/License-Private-lightgrey)
 
@@ -33,7 +32,7 @@ O site foi concebido como um **produto digital**, não apenas como uma página e
 - Implementar páginas com narrativa e hierarquia visual
 - Integrar contato funcional (WhatsApp)
 - Preparar o projeto para crescimento (APIs, CMS, automações)
-- Containerizar o ambiente com Docker
+- Containerizar o ambiente com Docker (em andamento)
 
 ---
 
@@ -48,22 +47,23 @@ O site foi concebido como um **produto digital**, não apenas como uma página e
 - Integração direta com WhatsApp  
 - Estrutura pronta para integração com APIs  
 - Layout responsivo  
-- Projeto dockerizado  
+- Docker Compose configurado (falta o Dockerfile)  
 
 ---
 
 ## 🧩 Arquitetura
 
+```
 site-genner/
 ├── site/
-│ ├── app/ # Páginas (Next App Router)
-│ ├── components/ # Componentes reutilizáveis
-│ ├── public/images/ # Assets e imagens
-│ └── package.json
-│
+│   ├── app/                # Páginas (Next App Router): /, /sobre, /avaliacao, /videos, /contato
+│   ├── components/         # Hero, Section, Card, CTA, FeatureGrid, ContactForm
+│   ├── public/images/      # Assets e imagens
+│   └── package.json        # Next.js 16.1, React 19.2, Tailwind CSS 4, TypeScript 5
 ├── docker-compose.yml
-├── Dockerfile
-└── README.md
+├── makefile
+└── readme.md
+```
 
 
 ---
@@ -74,7 +74,7 @@ site-genner/
 - React
 - TypeScript
 - Docker / Docker Compose
-- CSS-in-JS (inline styles)
+- CSS-in-JS (inline styles) + Tailwind CSS 4 (PostCSS)
 - Integração com WhatsApp
 - Arquitetura modular
 
@@ -97,14 +97,18 @@ Acesse:
 
 ``docker-compose up --build``
 
+> ⚠️ O `docker-compose.yml` faz build de `./site`, mas ainda não existe um `Dockerfile` no repositório. É preciso adicioná-lo antes de usar o Docker.
+
 
 ⚙️ Comandos úteis
 
 ```bash
 
-make dev      # ambiente de desenvolvimento
-make build    # build do site
-docker-compose down
+make dev          # ambiente de desenvolvimento (npm run dev)
+make build        # build do site (npm run build)
+make docker-up    # sudo docker-compose up --build
+make docker-down  # sudo docker-compose down
+make clean        # remove node_modules e .next
 
 ```
 
